@@ -2,6 +2,7 @@ use std::fmt::{self, Formatter, Display};
 
 /* Demonstrates printing of a user defined struct using println! macro.*/
 
+/// Struct containing name and latitude/longitude of city
 struct City {
     name: &'static str,
     // Latitude
@@ -10,6 +11,7 @@ struct City {
     lon: f32,
 }
 
+/// for city formating print statements as `CITYNAME: LATITUDE LONGITUDE`
 impl Display for City {
     // `f` is a buffer, this method must write the formatted string into it
     fn fmt(&self, f: &mut Formatter) -> fmt::Result {
@@ -22,6 +24,7 @@ impl Display for City {
     }
 }
 
+/// Structure that contains the RGB values of a color
 #[derive(Debug)]
 struct Color {
     red: u8,
@@ -29,6 +32,7 @@ struct Color {
     blue: u8,
 }
 
+/// Display implementation that prints color in the format `red: VALUE,green VALUE,blue VALUE`
 impl Display for Color {
     // `f` is a buffer, this method must write the formatted string into it
     fn fmt(&self, f: &mut Formatter) -> fmt::Result {

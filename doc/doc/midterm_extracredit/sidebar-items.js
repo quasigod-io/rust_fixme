@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":[["main",""]],"struct":[["City","Struct containing name and latitude/longitude of city"],["Color","Structure that contains the RGB values of a color"]]};
